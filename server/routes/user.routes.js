@@ -17,4 +17,4 @@ router.route('/api/stripe_auth/:userId')
 
 router.param('userId', userCtrl.userByID)
 
-export default router;
+export default router
