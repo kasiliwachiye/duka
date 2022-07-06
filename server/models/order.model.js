@@ -4,9 +4,11 @@ const CartItemSchema = new mongoose.Schema({
   product: {type: mongoose.Schema.ObjectId, ref: 'Product'},
   quantity: Number,
   shop: {type: mongoose.Schema.ObjectId, ref: 'Shop'},
-  status: {type: String,
+  status: {
+    type: String,
     default: 'Not processed',
-    enum: ['Not processed' , 'Processing', 'Shipped', 'Delivered', 'Cancelled']}
+    enum: ['Not processed' , 'Processing', 'Shipped', 'Delivered', 'Cancelled']
+  }
 })
 const CartItem = mongoose.model('CartItem', CartItemSchema)
 const OrderSchema = new mongoose.Schema({

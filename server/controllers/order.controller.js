@@ -30,7 +30,7 @@ const listByShop = async (req, res) => {
 
 const update = async (req, res) => {
   try {
-    let order = await Order.update({'products._id':req.body.cartItemId}, {'$set': {
+    let order = await Order.updateOne({'products._id':req.body.cartItemId}, {'$set': {
       'products.$.status': req.body.status
     }})
       res.json(order)
