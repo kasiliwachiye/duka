@@ -36,4 +36,4 @@ router.route('/api/product/:shopId/:productId')
 router.param('shopId', shopCtrl.shopByID)
 router.param('productId', productCtrl.productByID)
 
-export default router
+export default router;
