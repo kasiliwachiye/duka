@@ -93,7 +93,7 @@ export default function ProductOrderEdit (props){
             })
           }
         })
-    } else if (event.target.value === "Processing") {
+    } else if (event.target.value == "Processing") {
       processCharge({
           userId: jwt.user._id,
           shopId: props.shopId,

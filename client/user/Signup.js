@@ -68,8 +68,10 @@ export default function Signup() {
         setValues({ ...values, error: '', open: true})
       }
     })
-  }   
-    return (<div>
+  }
+  
+  return (
+    <div>
       <Card className={classes.card}>
         <CardContent>
           <Typography variant="h6" className={classes.title}>

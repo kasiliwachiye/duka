@@ -52,7 +52,7 @@ export default function Users() {
         All Users
       </Typography>
       <List dense>
-       {users.map((item, i) => {
+      {users.map((item, i) => {
         return (
           <Link to={"/user/" + item._id} key={i}>
             <ListItem button>

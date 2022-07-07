@@ -109,6 +109,7 @@ export default function Categories(props){
     </div>
   )
 }
+
 Categories.propTypes = {
   categories: PropTypes.array.isRequired
 }

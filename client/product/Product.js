@@ -101,7 +101,7 @@ export default function Product ({match}) {
   const imageUrl = product._id
     ? `/api/product/image/${product._id}?${new Date().getTime()}`
     : '/api/product/defaultphoto'
-    
+
   return (
     <div className={classes.root}>
       <Grid container spacing={10}>

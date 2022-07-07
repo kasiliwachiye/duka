@@ -71,7 +71,7 @@ export default function EditProfile({ match }) {
       abortController.abort()
     }
 
-  }, [jwt.token, match.params.userId, values])
+  }, [match.params.userId])
 
   const clickSubmit = () => {
     const user = {
@@ -104,7 +104,7 @@ export default function EditProfile({ match }) {
   if (values.redirectToProfile) {
     return (<Redirect to={'/user/' + values.userId}/>)
   }
-
+  
   return (
     <Card className={classes.card}>
       <CardContent>

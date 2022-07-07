@@ -5,8 +5,8 @@ import { ThemeProvider } from '@material-ui/styles'
 import theme from './theme'
 import { hot } from 'react-hot-loader'
 
-function App() {  
-
+const App = () => {
+  
   useEffect(() => {
     const jssStyles = document.querySelector('#jss-server-side')
     if (jssStyles) {
@@ -16,11 +16,11 @@ function App() {
   
   return (
     <BrowserRouter>
-      <ThemeProvider theme={theme}>
-        <MainRouter/>
-      </ThemeProvider>
+        <ThemeProvider theme={theme}>
+          <MainRouter/>
+        </ThemeProvider>
     </BrowserRouter>
   )
 }
 
-export default hot(module)(App);
+export default hot(module)(App)

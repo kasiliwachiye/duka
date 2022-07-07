@@ -65,7 +65,7 @@ export default function MyProducts (props){
     return function cleanup(){
       abortController.abort()
     }
-  }, [props.shopId])
+  }, [])
 
   const removeProduct = (product) => {
     const updatedProducts = [...products]
@@ -120,6 +120,7 @@ export default function MyProducts (props){
     </Card>
   )
 }
+
 MyProducts.propTypes = {
   shopId: PropTypes.string.isRequired
 }

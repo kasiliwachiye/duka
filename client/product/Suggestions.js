@@ -78,6 +78,7 @@ const useStyles = makeStyles(theme => ({
 
 export default function Suggestions (props) {
   const classes = useStyles()
+  
   return (
     <div>
       <Paper className={classes.root} elevation={4}>
