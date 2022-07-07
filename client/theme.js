@@ -8,17 +8,17 @@ const theme = createMuiTheme({
     main: '#607d8b',
     dark: '#34515e',
     contrastText: '#fff',
-    },
-    secondary: {
+  },
+  secondary: {
     light: '#e7ff8c',
     main: '#b2ff59',
     dark: '#7ecb20',
     contrastText: '#000',
-    },
+  },
     openTitle: blueGrey['400'],
     protectedTitle: lightGreen['400'],
     type: 'light'
   }
 })
 
-export default theme;
+  export default theme
