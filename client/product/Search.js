@@ -73,6 +73,7 @@ export default function Search(props) {
       search()
     }
   }
+  
   return (
     <div>
       <Card className={classes.card}>

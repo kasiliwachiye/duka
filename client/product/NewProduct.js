@@ -87,9 +87,9 @@ export default function NewProduct({match}) {
   }
 
   if (values.redirect) {
-    return <Redirect to={'/seller/shop/edit/'+match.params.shopId}/>
+    return (<Redirect to={'/seller/shop/edit/'+match.params.shopId}/>)
   }
-
+  
   return (
     <div>
       <Card className={classes.card}>

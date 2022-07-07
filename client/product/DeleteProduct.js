@@ -59,8 +59,8 @@ export default function DeleteProduct(props) {
       </Dialog>
     </span>
   )
-}
 
+}
 DeleteProduct.propTypes = {
   shopId: PropTypes.string.isRequired,
   product: PropTypes.object.isRequired,

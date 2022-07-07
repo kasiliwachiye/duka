@@ -111,10 +111,10 @@ export default function EditProduct ({match}) {
       : event.target.value
     setValues({...values,  [name]: value })
   }
+
   const imageUrl = values.id
         ? `/api/product/image/${values.id}?${new Date().getTime()}`
         : '/api/product/defaultphoto'
-        
   if (values.redirect) {
     return (<Redirect to={'/seller/shop/edit/'+match.params.shopId}/>)
   }
