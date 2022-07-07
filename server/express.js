@@ -11,7 +11,6 @@ import authRoutes from './routes/auth.routes'
 import shopRoutes from './routes/shop.routes'
 import productRoutes from './routes/product.routes'
 import orderRoutes from './routes/order.routes'
-import auctionRoutes from './routes/auction.routes'
 
 // modules for server side rendering
 import React from 'react'
@@ -23,13 +22,13 @@ import { ServerStyleSheets, ThemeProvider } from '@material-ui/styles'
 import theme from './../client/theme'
 
 //comment out before building for production
-// import devBundle from './devBundle'
+import devBundle from './devBundle'
 
 const CURRENT_WORKING_DIR = process.cwd()
 const app = express()
 
 //comment out before building for production
-// devBundle.compile(app)
+devBundle.compile(app)
 
 // parse body params and attache them to req.body
 app.use(bodyParser.json())
@@ -49,7 +48,6 @@ app.use('/', authRoutes)
 app.use('/', shopRoutes)
 app.use('/', productRoutes)
 app.use('/', orderRoutes)
-app.use('/', auctionRoutes)
 
 app.get('*', (req, res) => {
   const sheets = new ServerStyleSheets()
