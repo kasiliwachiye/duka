@@ -8,8 +8,8 @@ const config = {
     (process.env.MONGO_PORT || '27017') +
     '/duka',
   stripe_connect_test_client_id: 'ca_FkyHCg7X8mlvCUdMDao4mMxagUfhIwXb',
-  stripe_test_secret_key: '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',
-  stripe_test_api_key: 'pk_live_51IdvJgK5HXK2AlvIpE92GtBv8lqz6UDrnneZaOSSFsy4Kf7vI2DWodkpAevs3S8riKBgYYXAhMtgJhVDjjkRAkVP00H6c6gwd1'
+  stripe_test_secret_key: 'sk_test_51IdvJgK5HXK2AlvIGdtWYY4u9zxByOQPWmt6GItrzh8wWlA7SJDE6DCOWC78mcUwSk39aCUP54iJNIsqUOt905x600hkWmZ445',
+  stripe_test_api_key: 'pk_test_51IdvJgK5HXK2AlvIKbc40hl2oN1BM5STp5ECiv3ccWg4reGk4Ps0DaJhhRjPe0mT31NOgR7BbnmbfuZpj3btNa4t002FqjU7Jz'
 }
 
 export default config
