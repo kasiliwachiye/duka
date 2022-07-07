@@ -1,11 +1,15 @@
 const config = {
-  env: process.env.NODE_ENV,
-  port: process.env.PORT,
+  env: process.env.NODE_ENV || 'development',
+  port: process.env.PORT || 3000,
   jwtSecret: process.env.JWT_SECRET || "YOUR_secret_key",
-  mongoUri: 'mongodb+srv://kasiliwachiye:RabbitHole4747@cluster0.xewhkin.mongodb.net/?retryWrites=true&w=majority', 
-  stripe_connect_test_client_id: 'ca_FkyHCg7X8mlvCUdMDao4mMxagUfhIwXb',
-  stripe_test_secret_key: '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',
-  stripe_test_api_key: 'pk_live_51IdvJgK5HXK2AlvIpE92GtBv8lqz6UDrnneZaOSSFsy4Kf7vI2DWodkpAevs3S8riKBgYYXAhMtgJhVDjjkRAkVP00H6c6gwd1',
+  mongoUri: process.env.MONGODB_URI ||
+  process.env.MONGO_HOST ||
+  'mongodb://' + (process.env.IP || 'localhost') + ':' +
+  (process.env.MONGO_PORT || '27017') +
+  '/duka', 
+  stripe_connect_test_client_id: process.env.STRIPE_CONNECT_TEST_CLIENT_ID || 'YOUR_stripe_connect_test_client',
+  stripe_test_secret_key: process.env.STRIPE_TEST_SECRET_KEY ||'YOUR_stripe_test_secret_key',
+  stripe_test_api_key: process.env.STRIPE_TEST_API_KEY ||'YOUR_stripe_test_api_key',
 }
 
 export default config;
