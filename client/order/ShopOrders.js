@@ -58,7 +58,7 @@ export default function ShopOrders({match}) {
     return function cleanup(){
       abortController.abort()
     }
-  }, [jwt.token, match.params.shopId])
+  }, [])
 
   const handleClick = index => event => {
     setOpen(index)

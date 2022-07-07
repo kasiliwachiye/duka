@@ -59,7 +59,9 @@ export default function MyOrders(){
                       </ListItem>
                     </Link>
                     <Divider/>
-                  </span>})}
+                  </span>
+          })
+        }
       </List>
     </Paper>
   )

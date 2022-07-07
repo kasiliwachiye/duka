@@ -12,24 +12,22 @@ import Badge from '@material-ui/core/Badge'
 import cart from './../cart/cart-helper'
 
 const isActive = (history, path) => {
-  if (history.location.pathname === path)
+  if (history.location.pathname == path)
     return {color: '#bef67a'}
   else
     return {color: '#ffffff'}
 }
-
 const isPartActive = (history, path) => {
   if (history.location.pathname.includes(path))
     return {color: '#bef67a'}
   else
     return {color: '#ffffff'}
 }
-
 const Menu = withRouter(({history}) => (
   <AppBar position="static">
     <Toolbar>
       <Typography variant="h6" color="inherit">
-        Duka
+        MERN Marketplace
       </Typography>
       <div>
         <Link to="/">
@@ -40,10 +38,13 @@ const Menu = withRouter(({history}) => (
         <Link to="/shops/all">
           <Button style={isActive(history, "/shops/all")}>All Shops</Button>
         </Link>
+        <Link to="/auctions/all">
+          <Button style={isActive(history, "/auctions/all")}>All Auctions</Button>
+        </Link>
         <Link to="/cart">
           <Button style={isActive(history, "/cart")}>
             Cart
-            <Badge color="secondary" invisible={false} badgeContent={cart.itemTotal()} style={{'marginLeft': '7px'}}>
+            <Badge invisible={false} color="secondary" badgeContent={cart.itemTotal()} style={{'marginLeft': '7px'}}>
               <CartIcon />
             </Badge>
           </Button>
@@ -64,7 +65,11 @@ const Menu = withRouter(({history}) => (
       }
       {
         auth.isAuthenticated() && (<span>
-          {auth.isAuthenticated().user.seller && (<Link to="/seller/shops"><Button style={isPartActive(history, "/seller/")}>My Shops</Button></Link>)}
+          {auth.isAuthenticated().user.seller && (<>
+            <Link to="/seller/shops"><Button style={isPartActive(history, "/seller/")}>My Shops</Button></Link>
+            <Link to="/myauctions"><Button style={isPartActive(history, "/myauctions")}>My Auctions</Button></Link>
+            </>
+          )}
           <Link to={"/user/" + auth.isAuthenticated().user._id}>
             <Button style={isActive(history, "/user/" + auth.isAuthenticated().user._id)}>My Profile</Button>
           </Link>
@@ -76,7 +81,6 @@ const Menu = withRouter(({history}) => (
       </span></div>
     </Toolbar>
   </AppBar>
-  )
-)
+))
 
-export default Menu;
+export default Menu
