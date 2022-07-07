@@ -27,7 +27,7 @@ export default function DeleteUser(props) {
       if (data && data.error) {
         console.log(data.error)
       } else {
-        auth.signout(() => console.log('deleted'))
+        auth.clearJWT(() => console.log('deleted'))
         setRedirect(true)
       }
     })
@@ -39,7 +39,6 @@ export default function DeleteUser(props) {
   if (redirect) {
     return <Redirect to='/'/>
   }
-  
   return (
     <span>
       <IconButton aria-label="Delete" onClick={clickButton} color="secondary">
